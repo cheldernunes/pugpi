@@ -12,7 +12,7 @@ class PostAdmin(admin.ModelAdmin):
     exclude = ('updated_at',)
 
     def get_action(self, action):
-        return u'<a href="/%s" target="blank">Visualizar Post</a>' % action.url()
+        return u'<a href="/%s" target="blank">Visualizar Post</a>' % action.get_absolute_url()
     get_action.allow_tags = True
     get_action.short_description = 'Ações'
 
